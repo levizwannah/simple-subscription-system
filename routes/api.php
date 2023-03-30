@@ -26,7 +26,7 @@ Route::controller(PostController::class)->prefix('posts')
     Route::post('{postId}/status', 'status');
 });
 
-Route::controller(WebsiteController::class)->prefix('subscription')
+Route::controller(SubscriptionController::class)->prefix('subscription')
 ->group(function(){
     Route::post('/{userId}/subscribe/{websiteId}', 'subscribe');
 });
