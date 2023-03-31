@@ -18,8 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/website', [WebsiteController::class, 'store']);
 
-Route::post('/subscribe', [SubscriptionController::class, 'store']);
-
 Route::controller(PostController::class)->prefix('posts')
 ->group(function(){
     Route::post('/', 'store');
